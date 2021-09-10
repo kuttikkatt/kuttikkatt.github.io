@@ -4,4 +4,27 @@
 <h1>Lighthouse Project</h1>
 <p>Hosted here in this plain format until I learn how to do it better<p>
 </body>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 </html>
